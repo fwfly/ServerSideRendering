@@ -34,4 +34,10 @@ function mapStateToPorps(state){
  return {users : state.users};
 }
 
+function loadData(){
+  console.log("I'm loading data");
+}
+
+export { loadData };
+
 export default connect(mapStateToPorps, {fetchUsers})(UserList);
