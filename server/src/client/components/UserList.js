@@ -34,8 +34,8 @@ function mapStateToPorps(state){
  return {users : state.users};
 }
 
-function loadData(){
-  console.log("I'm loading data");
+function loadData(store){
+  return store.dispatch(fetchUsers());
 }
 
 export { loadData };
