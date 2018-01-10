@@ -7,7 +7,7 @@ import axios from 'axios';
 export default (req)=>{
   const axiosInstance = axios.create({
     baseURL: 'http://react-ssr-api.herokuapp.com',
-    headers: req.get('cookie') || ''
+    headers: { cookie:  req.get('cookie') || ''}
   });
 
   const store = createStore(reducers, {}, applyMiddleware(thunk.withExtraArgument(axiosInstance)));
