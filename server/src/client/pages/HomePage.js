@@ -4,8 +4,8 @@ import React from 'react';
 const Home = () =>{
   return (
     <div>
-      <div>Hi There !!!</div>
-      <button onClick={ ()=>{ console.log("click")  }  }>Press</button>
+      <h3>Welcome</h3>
+      <p>This is SSR website</p>
     </div>
   );
 }
