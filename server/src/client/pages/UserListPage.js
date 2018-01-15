@@ -18,15 +18,21 @@ class UserList extends Component{
     })
   }
 
+  header(){
+    return(
+      <Helmet>
+        <title>
+          {`${this.props.users.length}`} Users Loaded
+        </title>
+        <meta property="og:title" component="User App" />
+      </Helmet>
+    );
+  }
+
   render(){
     return(
       <div>
-        <Helmet>
-          <title>
-            User App
-          </title>
-          <meta property="og:title" component="User App" />
-        </Helmet>
+        {this.header()}
         Here's big list of users:
         <ul>
           {this.renderUser()}
